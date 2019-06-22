@@ -1,4 +1,5 @@
 import React from 'react';
+import {Header} from "./components/Header";
 import './App.css';
 
 // render 함수에 컴포넌트를 배치하는 방법 두 가지 규칙
@@ -20,18 +21,6 @@ import './App.css';
 //     {name:'EEE', id:"3"},
 //     {name:'RRR', id:"4"}
 // ];
-
-//함수표현식
-const Header = ({title, totalPlayers}) => {
-  //console.log(props);
-  //const {title, totalPlayers} = props;  //해체할당 (destruct assigment
-  return (
-      <header className="header">
-        <h1 className="h1">{title}</h1>
-        <span className="stats">Players : {totalPlayers}</span>
-      </header>
-  )
-}
 
 const Player = (props) => (
     <div className="player">
