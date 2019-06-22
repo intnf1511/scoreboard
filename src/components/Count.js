@@ -4,11 +4,6 @@ export class Count extends React.Component {
 
     constructor() {
         super();
-        //시간에 따라 변하는 데이터
-        this.state ={
-            score: 0
-        };
-        //현재의 자기 자신을 넘겨줌
         //this.incrementScore = this.incrementScore.bind(this);
     }
 
@@ -18,7 +13,7 @@ export class Count extends React.Component {
         // setState를 호출해야만 UI 렌더링이 된다.
         //this.setState({score: this.state.score +1});
         this.setState(preScore => {
-            return {score: this.state.score +delta}
+            return {score: this.preScore.score +delta}
         })
     }
 
@@ -26,7 +21,7 @@ export class Count extends React.Component {
         return (
             <div className="counter">
                 <button className="counter-action decrement" onClick={() => this.handleScore(-1)}>-</button>
-                <span className="counter-score">{this.state.score}</span>
+                <span className="counter-score">{this.props.score}</span>
                 <button className="counter-action increment" onClick={() => this.handleScore(1)}>+</button>
             </div>
         )

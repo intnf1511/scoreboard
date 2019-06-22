@@ -7,6 +7,6 @@ export const Player = (props) => (
             <button className="remove-player" onClick={() => props.removePlayer(props.id)}>X</button>
             {props.name}
         </span>
-        <Count/>
+        <Count score={props.score}/>
     </div>
 )

@@ -35,10 +35,10 @@ class App extends React.Component {
 
   state = {
     players: [
-      {name:'QQQ', id:"1"},
-      {name:'WWW', id:"2"},
-      {name:'EEE', id:"3"},
-      {name:'RRR', id:"4"}
+      {name:'QQQ', id:"1", score: 0},
+      {name:'WWW', id:"2", score: 0},
+      {name:'EEE', id:"3", score: 0},
+      {name:'RRR', id:"4", score: 0}
     ]
   }
 
@@ -57,7 +57,7 @@ class App extends React.Component {
           <Header title="My Scoreboard" totalPlayers={11}/>
           {
             this.state.players.map(player => (
-                <Player name={player.name} id={player.id} key={player.id}
+                <Player name={player.name} id={player.id} key={player.id} score={player.score}
                         removePlayer={this.handleRemovePlayer}/>
             ))
           }
